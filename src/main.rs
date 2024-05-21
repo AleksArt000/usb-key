@@ -10,7 +10,8 @@ use std::
     path::Path,
 };
 
-use sys_mount::{
+use sys_mount::
+{
     Mount,
     MountFlags,
     SupportedFilesystems,
@@ -25,7 +26,8 @@ use sha256::{digest, try_digest};
 #[derive(Debug)]
 struct ExampleError(String);
 
-impl ExampleError {
+impl ExampleError 
+{
     fn new<D>(d: D) -> Self
     where
         D: Display,
@@ -34,8 +36,10 @@ impl ExampleError {
     }
 }
 
-impl Display for ExampleError {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+impl Display for ExampleError 
+{
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result 
+    {
         write!(f, "{}", self.0)
     }
 }
